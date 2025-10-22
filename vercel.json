@@ -18,12 +18,15 @@
           "value": "application/json"
         }
       ]
-    }
-  ],
-  "rewrites": [
+    },
     {
-      "source": "/",
-      "destination": "/releases.json"
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
     }
   ]
 }

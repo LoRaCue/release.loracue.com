@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoRaCue Firmware Releases</title>
+    <meta name="description" content="Official LoRaCue firmware releases with cryptographic signature verification">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 3rem 0;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .stat-card h3 {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .releases {
+            margin-top: 2rem;
+        }
+
+        .release-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .release-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .release-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .release-version {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .release-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge-release {
+            background: #10b981;
+            color: white;
+        }
+
+        .badge-prerelease {
+            background: #f59e0b;
+            color: white;
+        }
+
+        .release-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .release-meta span {
+            margin-right: 1.5rem;
+        }
+
+        .release-changelog {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f9fafb;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .boards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .board-card {
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .board-card:hover {
+            border-color: #667eea;
+        }
+
+        .board-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            transition: background 0.2s;
+        }
+
+        .download-btn:hover {
+            background: #5568d3;
+        }
+
+        .security-notice {
+            background: rgba(255,255,255,0.95);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid #10b981;
+        }
+
+        .security-notice h3 {
+            color: #10b981;
+            margin-bottom: 1rem;
+        }
+
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            padding: 3rem;
+        }
+
+        .error {
+            background: #fee;
+            color: #c00;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            opacity: 0.9;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .release-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 LoRaCue Firmware Releases</h1>
+            <p>Enterprise LoRa Presentation Clicker - Official Firmware Distribution</p>
+        </header>
+
+        <div id="loading" class="loading">
+            Loading releases...
+        </div>
+
+        <div id="error" class="error" style="display: none;"></div>
+
+        <div id="stats" class="stats" style="display: none;"></div>
+
+        <div class="security-notice" style="display: none;" id="security">
+            <h3>🔒 Cryptographically Signed & Verified</h3>
+            <p>All firmware releases are signed with RSA-4096 and verified at multiple levels:</p>
+            <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                <li>Release index signature verification</li>
+                <li>Manifest signature verification</li>
+                <li>Individual binary signature verification</li>
+            </ul>
+            <p style="margin-top: 1rem;">
+                <strong>Recommended:</strong> Use <a href="https://github.com/LoRaCue/loracue-manager" target="_blank" style="color: #667eea;">LoRaCue Manager</a> for automatic verification and installation.
+            </p>
+        </div>
+
+        <div id="releases" class="releases"></div>
+
+        <footer>
+            <p>
+                <a href="https://github.com/LoRaCue/loracue" target="_blank">GitHub Repository</a> •
+                <a href="https://github.com/LoRaCue/loracue-manager" target="_blank">LoRaCue Manager</a> •
+                <a href="https://github.com/LoRaCue/loracue/wiki" target="_blank">Documentation</a>
+            </p>
+            <p style="margin-top: 0.5rem;">Made with ❤️ in Hannover</p>
+        </footer>
+    </div>
+
+    <script>
+        async function loadReleases() {
+            try {
+                const response = await fetch('/releases.json');
+                if (!response.ok) throw new Error('Failed to fetch releases');
+                
+                const data = await response.json();
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('security').style.display = 'block';
+                
+                renderStats(data);
+                renderReleases(data);
+            } catch (error) {
+                document.getElementById('loading').style.display = 'none';
+                const errorDiv = document.getElementById('error');
+                errorDiv.textContent = `Error loading releases: ${error.message}`;
+                errorDiv.style.display = 'block';
+            }
+        }
+
+        function renderStats(data) {
+            const statsDiv = document.getElementById('stats');
+            statsDiv.style.display = 'grid';
+            
+            const totalReleases = data.releases.length;
+            const stableReleases = data.releases.filter(r => r.release_type === 'release').length;
+            const latestVersion = data.latest_stable || data.latest_prerelease || 'N/A';
+            
+            statsDiv.innerHTML = `
+                <div class="stat-card">
+                    <h3>${totalReleases}</h3>
+                    <p>Total Releases</p>
+                </div>
+                <div class="stat-card">
+                    <h3>${stableReleases}</h3>
+                    <p>Stable Releases</p>
+                </div>
+                <div class="stat-card">
+                    <h3>${latestVersion}</h3>
+                    <p>Latest Version</p>
+                </div>
+                <div class="stat-card">
+                    <h3>${new Date(data.generated_at).toLocaleDateString()}</h3>
+                    <p>Last Updated</p>
+                </div>
+            `;
+        }
+
+        function renderReleases(data) {
+            const releasesDiv = document.getElementById('releases');
+            
+            if (data.releases.length === 0) {
+                releasesDiv.innerHTML = '<p style="color: white; text-align: center;">No releases available yet.</p>';
+                return;
+            }
+            
+            releasesDiv.innerHTML = data.releases.map(release => `
+                <div class="release-card">
+                    <div class="release-header">
+                        <div class="release-version">v${release.version}</div>
+                        <span class="release-badge badge-${release.release_type}">${release.release_type}</span>
+                    </div>
+                    
+                    <div class="release-meta">
+                        <span>📅 ${new Date(release.published_at).toLocaleDateString()}</span>
+                        <span>🔖 ${release.tag_name}</span>
+                        <span>💾 ${release.commit_sha.substring(0, 7)}</span>
+                    </div>
+                    
+                    <div class="release-changelog">
+                        <strong>Changes:</strong> ${release.changelog_summary || 'No changelog available'}
+                    </div>
+                    
+                    <div class="boards">
+                        ${release.supported_boards.map(board => `
+                            <div class="board-card">
+                                <div class="board-name">📟 ${formatBoardName(board)}</div>
+                                <a href="${release.manifest_url}" class="download-btn" target="_blank">
+                                    📥 Download Manifest
+                                </a>
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; font-size: 0.85rem; color: #666;">
+                        <strong>Verification:</strong> SHA256: ${release.manifest_sha256.substring(0, 16)}...
+                        <br>
+                        <strong>Signature:</strong> ${release.manifest_signature.substring(0, 32)}...
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function formatBoardName(boardId) {
+            const names = {
+                'heltec_v3': 'Heltec LoRa V3',
+                'heltec_v2': 'Heltec LoRa V2',
+                'ttgo_lora': 'TTGO LoRa32'
+            };
+            return names[boardId] || boardId;
+        }
+
+        // Load releases on page load
+        loadReleases();
+    </script>
+</body>
+</html>
