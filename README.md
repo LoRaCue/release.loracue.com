@@ -27,7 +27,7 @@ GitHub Actions → Generate releases.json → Commit → Vercel Auto-Deploy → 
 
 ## 🌐 Endpoints
 
-- **Production**: https://release.loracue.de/releases.json
+- **Production**: https://release.loracue.com/releases.json
 - **Vercel Preview**: https://release-loracue-de.vercel.app/releases.json
 
 ## 🔧 Setup
@@ -40,7 +40,7 @@ GitHub Actions → Generate releases.json → Commit → Vercel Auto-Deploy → 
 ### Vercel Configuration
 
 1. Connect repository to Vercel
-2. Configure custom domain: `release.loracue.de`
+2. Configure custom domain: `release.loracue.com`
 3. Enable automatic deployments on push to main
 4. Framework Preset: Other
 5. Build Command: (none)

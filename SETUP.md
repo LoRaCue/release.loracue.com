@@ -1,6 +1,6 @@
-# Setup Guide for release.loracue.de
+# Setup Guide for release.loracue.com
 
-This guide walks through setting up the release.loracue.de repository and Vercel deployment.
+This guide walks through setting up the release.loracue.com repository and Vercel deployment.
 
 ## 📋 Prerequisites
 
@@ -15,7 +15,7 @@ This guide walks through setting up the release.loracue.de repository and Vercel
 ```bash
 # On GitHub
 1. Go to https://github.com/organizations/LoRaCue/repositories/new
-2. Repository name: release.loracue.de
+2. Repository name: release.loracue.com
 3. Visibility: Private
 4. Initialize: No (we'll push existing files)
 5. Click "Create repository"
@@ -24,14 +24,14 @@ This guide walks through setting up the release.loracue.de repository and Vercel
 ### 2. Push Initial Files
 
 ```bash
-# From /tmp/release.loracue.de directory
-cd /tmp/release.loracue.de
+# From /tmp/release.loracue.com directory
+cd /tmp/release.loracue.com
 
 git init
 git add .
 git commit -m "chore: initial repository setup"
 git branch -M main
-git remote add origin git@github.com:LoRaCue/release.loracue.de.git
+git remote add origin git@github.com:LoRaCue/release.loracue.com.git
 git push -u origin main
 ```
 
@@ -39,7 +39,7 @@ git push -u origin main
 
 ```bash
 # Add FIRMWARE_SIGNING_KEY secret
-1. Go to https://github.com/LoRaCue/release.loracue.de/settings/secrets/actions
+1. Go to https://github.com/LoRaCue/release.loracue.com/settings/secrets/actions
 2. Click "New repository secret"
 3. Name: FIRMWARE_SIGNING_KEY
 4. Value: (paste content of keys/firmware_private.pem from loracue repo)
@@ -52,7 +52,7 @@ git push -u origin main
 # On Vercel Dashboard
 1. Go to https://vercel.com/new
 2. Import Git Repository
-3. Select "LoRaCue/release.loracue.de"
+3. Select "LoRaCue/release.loracue.com"
 4. Configure Project:
    - Framework Preset: Other
    - Root Directory: ./
@@ -67,9 +67,9 @@ git push -u origin main
 ```bash
 # On Vercel Project Settings
 1. Go to project settings → Domains
-2. Add domain: release.loracue.de
+2. Add domain: release.loracue.com
 3. Follow DNS configuration instructions:
-   - Add CNAME record: release.loracue.de → cname.vercel-dns.com
+   - Add CNAME record: release.loracue.com → cname.vercel-dns.com
 4. Wait for DNS propagation (5-30 minutes)
 5. Verify HTTPS certificate is issued
 ```
@@ -98,7 +98,7 @@ git push -u origin main
 
 ```bash
 # Trigger manual workflow run
-1. Go to https://github.com/LoRaCue/release.loracue.de/actions
+1. Go to https://github.com/LoRaCue/release.loracue.com/actions
 2. Select "Update Release Index" workflow
 3. Click "Run workflow"
 4. Wait for completion
@@ -109,7 +109,7 @@ git push -u origin main
 
 ```bash
 # Check endpoints
-curl https://release.loracue.de/releases.json
+curl https://release.loracue.com/releases.json
 curl https://release-loracue-de.vercel.app/releases.json
 
 # Both should return the same JSON with signature
