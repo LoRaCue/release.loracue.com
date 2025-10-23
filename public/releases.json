@@ -1,8 +1,23 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2025-10-23T18:21:53.164907Z",
+  "generated_at": "2025-10-23T18:28:49.542839Z",
   "latest_stable": null,
-  "latest_prerelease": null,
-  "releases": [],
-  "signature": "EygvKUAfahabB7Qk7R3jLFIWlzv0uNkefU0T9u59xi9BrP+z5hiTisRQjrgHmVqM5Wnn3cP8YsUdCmffAnwsFpjdbrgVKV5w54yY0wg0VFzV3JsdPmTfzK1lhVM1vEm4wEOyjJ1FlGi5OmwxCti5Gl3wmRWDgd7pwixIjv17YYlkXdO/TFVzwo3fgC+r8WihzWO0vKqhApvfVe5YLrdGE+ZHqFg0gPq9HiUswfA8WbnhpvCocnh7kjr/ef21QlxUK/KRaRKJF6aAKWM9i18AJkFJ2j7UUa84/okLJs2Kjrdg5DpFKdo8VXQzWRKIvR2JDmWjzAKTJ8udKuZGSkcvJpKtIksowa0qwoViOzsMsYGEHSXoiRGMlvIhXsVaeDbZhWzRpK5Y3TR3EYxReyOKPaBaE/EtG0pi/3P1rBL7+IGOin35FEqQH8g9GTigXVzATiQrWwne3TZQbZyjujVzGM5QPw55YrRNbbEnEJjy5gj0w3fP84baUIt6f+cNyLANGXeOb9pZu84hZPOC8SFGh6y5V5VwdPyWasfwbnewJN1YU8mCeVoVrGpxrGI+yS51zT2NGT9nVo78OXe/ZFUutvR51aVU4p2ekFYwi+TQmLxMvkag1yA3vx1RRNcYdKrx1baL1g1nzOPnTh80LumqcIplnn6iFYj1RvwHnyOu6mU="
+  "latest_prerelease": "0.1.0-alpha.5",
+  "releases": [
+    {
+      "version": "0.1.0-alpha.5",
+      "release_type": "prerelease",
+      "published_at": "2025-10-23T18:28:29Z",
+      "commit_sha": "17ff702c11298c9c8fdc5d39164a44e5f164abf1",
+      "tag_name": "v0.1.0-alpha.5",
+      "manifest_url": "https://github.com/LoRaCue/loracue/releases/download/v0.1.0-alpha.5/manifest.json",
+      "manifest_sha256": "65926ac748996c0f08313808899693661da935adf31b48aee1bf3f6f793949ac",
+      "manifest_signature": "MgsvbGo3sWsjk02tPyWQ9GV9csKM7SOq+nyTUPjrBr4fWYV8wzTWUEdM2ggBGXgF9D0OJyglIHGTl8vXD0Fphm+unmw4sXNwLBRL1CCfOdsf8sAkBG02jzKCTD3YlN+EEVit2OO7stiR66tP2MP7V9SMFm3f4GDwuZHdhgkhGkzYlqzOByIWhvxVQoJJhD2DWudq1IvlVn83vzYupdhSDvEbE2eD30lCzzSi4UiscMTsy/n80iwWj67gcA6jDIX1z4r5L1vsADc+yJHvcPKNXXt/46KMCtoJYQIWApWc6Rt5jeep1NTkOjfqmm4J4cqB1SkO1cBt8HKqMzvuEJaN5vumJvTNrSZgOmwooinOfjP35y83bHJFGOrS3ejOUlU5sa+SLxslU6QeCT1Ru831ICntxYFMxTprPVRIydej/SqtCfVUDTqFUAwhHJHHk1HbVuZSt/6FDi0+cjnSJawdmOq2kFhzfVjSOVm7yj0yNVe0o2M/JDVrGwQTsYOjX2Qs31eZOPOZ7v5vN/50NEoIlTFMZ0A7w6d8rXqWfHwdod6qTYziyyKHeVrNDpLkAxFkWIIRAv0oe1yt73UD3PSs/iHnwTvjXIcdLUcOVn06fCNqbmBJI8Mjph7OlTMbISdSF9Cg+Y+cmJg9e0FrhThiRfNF21awi8YfCxMCz5v4llk=",
+      "supported_boards": [
+        "heltec_v3"
+      ],
+      "changelog_summary": "No changes documented"
+    }
+  ],
+  "signature": "iUWRFMCdtTiWG2v9lCI4YTtHrWbx1a7JGJ/MPHCK1ybPkSi9aUY3MytTsSsjlZ9pxP7t62jEl52byhIA/2nH5TUwbHcx//R0pLF9St8u2Sd2/GKjd9hYldFXFfDPKf3bVG65WWsDNPYEc4uv3BwDYFP7ELu2rjlr7KnDMOdPQJmYmEtKinIwpwTfv2cpTn6EKuEEjoADiBcguvinoHxT10eu9VoKAeDSOupWA8nFQQzOz/F6VoWEr8Da54U2B9pXLv3qkG9MtR2wBxdPG8N8ZFdho1OJCSdDfjGC4dxvX1BVFrnmIwXV3gYeSLQ9bE969rfTQPSHEPHiso2glwOAOMppA7yhOx0JsELoCvtGyp9EXt19uobogx3jJKZNrk/LvHplMKpC6yv5wyjUnOdH0+/BLBfTsOcuAkRj9B3O/v+P2fJ8SfUqiK85CnrMcev55soKyr5Sju14Es79tWM89yQRMU/LILmNa/US0UPzS1s0J+qPf5s2JGoIxK3jvWIqKIGoIbmMVFw9u08iKX3ZoxdaIlMOOi+/GbCTzkXhXvYDYiO7F9LDqvObPULR3Sx03Lrl5OwbTIT4J1mlc6tWH3YaEDxNacNTtqEP10HX+5ofoUljJrkekSJFp4k/mJfGnVrgU5XhpYAirM3Prq8mh8oigEoOQn3kdUBiJcfOS6k="
 }
