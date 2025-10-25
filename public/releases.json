@@ -1,9 +1,23 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2025-10-25T06:20:16.572664Z",
+  "generated_at": "2025-10-25T10:29:40.909354Z",
   "latest_stable": null,
-  "latest_prerelease": "0.1.0-alpha.5",
+  "latest_prerelease": "0.1.0-alpha.12",
   "releases": [
+    {
+      "version": "0.1.0-alpha.12",
+      "release_type": "prerelease",
+      "published_at": "2025-10-25T10:29:19Z",
+      "commit_sha": "90c432b4a15737a88cbd0c1df0134f50fd5c195b",
+      "tag_name": "v0.1.0-alpha.12",
+      "manifest_url": "https://github.com/LoRaCue/loracue/releases/download/v0.1.0-alpha.12/manifest.json",
+      "manifest_sha256": "4d3194006cd31c1f4b9f9813d1d296e1ef3e38a91f2bfde64381d8dddcae6d00",
+      "manifest_signature": "Q6B+r7/mpSN6oqYA1Ln4M96NF5HhKK13JgpeYhv2SVmjbzobLiogvPMyHO/wSCHgTzeghzognw4+7KKeJ2F2XhIEsMoN+VU+ZMDoQgEKTgV/ENhCO4odh1R51kbYcJ0XEFYVGx6M1smh8UBKHT3h8qAQKkPuAXdB97g99Xka4zLjOFjmEZtWeSbwH0OViyutLqOXuW6QEoF+aASCxECWbp07dgD4C+fgk8fbV320uxOFvQyaSbypSWaxLp849bLZGH1hoA7qyY54vvqaIXDC787IOQKKgf92mdg5L5jV4TBh+RKBsPqCeSJ81tJ6n/zieCSMTbdMAmSJM+5yeOVbOJfzYPANw78WhnmxCBs/HbjeTO0RVxUNdOhyMHMx8H5O+SXWAo3zzSUCyahydUM4G/V3OJhQsMlRlIAHdFttj6FfjgFXmtg/rbtrZM5h4cX0OOb8qd4uLkMwku+1ADw5xm6oO1jl35jcl5r/ltY6WWxPsXgI6DOeSJxIW/dVyqimuHhBoDMXDaEnB6EnI3hcyQmIVUA3jqwXl+N25Ln1Yqp2rdt7RnrRA8gYlEa7Ov/BSeuo/XKFQ7N2kDa7lLLtibYYhEV8SCq/Yu0TRkrBOXelIo9e0UFRw09DCzyfn7bM1UQpzNxBZYcJ3gtfVuGlgoi6CPV2Nubiu6FxxIqLOhw=",
+      "supported_boards": [
+        "heltec_v3"
+      ],
+      "changelog_summary": "No changes documented"
+    },
     {
       "version": "0.1.0-alpha.5",
       "release_type": "prerelease",
@@ -19,5 +33,5 @@
       "changelog_summary": "No changes documented"
     }
   ],
-  "signature": "We5DqY1Hyj5lWGutXUpBikgZ8dVRzzDnf0Puz3yYXzp5cnnkfKQDXmgdePbfgUNpblW9ORGCyP2Gcb6EOeVLegli0P2BMcC5awlJVpa/6ZF+vWyOSjAjz994OF7R/RFUyEWz++Wzx7ESSR1e6SsUyQjGusyq3w326vlWmGJLsM3DQnOmVbpVAiB+8guPwZ35/l3Pif/OsmbAPWnDB8mHkMQlHz1LxZmn6LEcmHs+ZFGVfHj4lnhELPMPemc2vMDV0zpH8YA9U1ytTDkSXRemujTy6zAgc0I1+2dKLmiiM+jX4+gtBVyqJluk5sNgeyFHwt9QIrPgmn5E+IGErTBk/lQsgRTfMN8LHegs2M0onHVrBwTctfXOrj3tgpsMnn0fB9PHBzYaiRqrcpcUmbLOenIp78VOc+6NyYxwHwvIurZZzMMSlLQCqZijEHyz58hDeeHUiSK/wX3EnCZMpH6UOU2B3QJpIqOTVyaGpZiZ8A7fSFMSQpoAjBJfwDmcqZAeVd43H1xZ5KJ43ESAMwuYIeKMFpPI4fCy4Kzw5Pu6BgC1FYo4TqGosvtwm3xQVgVy2ILdNJ8wW/k2kecNhiUyf3Kxb5Mqc/XS3SZrQp81XTEQ6s9MpWOctHcXcHrUIsmT0EH3LO8ozOT0sF/VdCOwitahDRiUfGxRe1PxhaiO6IU="
+  "signature": "YqlYYSH2RL2nj9EGv5zuu/WIdpFPUwv7kYlgvB5WYYnbdSbVvUwcnuxGe3VPIvCZujzsUD1MBJ0shFJEXCO1kt1KqdcjFoF0gm8lC1aH6qQyiZmzMaGV8nUK58iqJg/iYAmk+4AF9BV+boSLWTF6bacMLXyvyqaudI/Qk+rPCtD4CA601hxGSM8uzGWB8aDpJrG4KtNwnNYPEs5f+FgpZd85wGwdlnZqhdnQGyRLg8pZd/iFZnuSCzusSXvpgzW8dm/X3Q0bf5ffwmQ7kqSug+3yc43ZPDI7bSY/cVwZB+zIHVTarCyYa0dhb0EDNDaNxt1xgCBjepTEN5bOt8xJD7ZUcif0d3FgsQXf2WeIJqk2FlucR+b66ZMWPo42vz0MUq3JrHbQraVht8fuwLE6egUxVlQALdywQT1ADyHUQ6zsN3KqneMP0aZ2lBDw8YDD5t+tIJP+hdc8KVUduvGN6lz9MvAwrpNdyY1SmYecHDsXdPVRLdbEPcceHgjQTJDN0sh0LBlev54//0ZWcjT9VZTZ26IuBSKbq8Tp9TjHwq/PlPB8//LG+hbWnFsz7f0uxQnw+255RaIdwHEva2LzCHqhHgXoSLyVTP2ZgXiNgmXMEm7YFKkuKwLwFFoqwHUl6bHIzyWGjnlhbDUfyV/UAXc6NhOHpYqg9VRCGZsoKo8="
 }
