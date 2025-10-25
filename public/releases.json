@@ -1,9 +1,23 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2025-10-25T10:32:55.290603Z",
+  "generated_at": "2025-10-25T11:40:48.185956Z",
   "latest_stable": null,
-  "latest_prerelease": "0.1.0-alpha.12",
+  "latest_prerelease": "0.1.0-alpha.13",
   "releases": [
+    {
+      "version": "0.1.0-alpha.13",
+      "release_type": "prerelease",
+      "published_at": "2025-10-25T11:40:29Z",
+      "commit_sha": "4c7784f0dd6582770fe03b8d5c29425102ae854d",
+      "tag_name": "v0.1.0-alpha.13",
+      "manifest_url": "https://github.com/LoRaCue/loracue/releases/download/v0.1.0-alpha.13/manifest.json",
+      "manifest_sha256": "d82a2639d2a6b3d7e887bf4dd7b3cbc5a8fad450a0d1a2b2d0739ef1bf6bbca9",
+      "manifest_signature": "Cqkwne3vASc8CnfVcm/jCo6xIHeHB0cAx0TpV3+f93WYbMRIkxdhNiMwxifunqhsCiSbDAwFvkVwRw4w3Gk8JZRwb0kaD5tUqnrQl07Cero4etdf3UxO0J5JrIvalOqmNcxQtdhCQWJN0fCwO/a6dPr78IQu4XtVnVfKsmWWjNkWSxrRIZ751DRt5i5YH5+kgrHDvfMAguMQ8AaZ92TwA6g/9uIFkWnBtSB4ydsPaSTUwP9AZeVsRhs9NL3geprfcVaTQU18byuy8s192NSUC+yEhvPeETGzkrfwaLQ9HyNWjkDm4OFhgG+BZchPXTL8RvQ72hrkwcDNH2WHCenP+N695Zlteg2uMxlUffpjj+JqVR5Zqx4IiE3TnTDDcpxR+zstNKfZfSuqgvYr8Vi8QNk7ucoemTnMO+ksv+eyjZLCYs4nKZ2GZQRqQNP6FXrPyuWz8jHobaR7DaUr7Z7h+QTjb1q01+WjVz+E2/e6UsqH3LJv3E7guUh1vAky8vkRWUdjY+8OZgpJVZim/5FVRYs4bqPuBwHyPwh+xHAIkZl2+jidnBWmNlvPuvQwy33SuFzVFwOpwSXFZSfvRSb4jtqpzBvFPHo1rtIM5ZuCGD84T8mvFaI8o9KDrJ6tHR6OA3tzsV74Q1Bl2ePKbSpOlYbmoGd90i//lCYKivXw8rs=",
+      "supported_boards": [
+        "lilygo_t5"
+      ],
+      "changelog_summary": "No changes documented"
+    },
     {
       "version": "0.1.0-alpha.12",
       "release_type": "prerelease",
@@ -33,5 +47,5 @@
       "changelog_summary": "No changes documented"
     }
   ],
-  "signature": "aRmIvxKULkSyoHAemaQ6YrHhQymhUyypNt/n/IdU9KZhUhLEW4/bCJgtoNQ/IDIzIcd2lyPv4MpAxdZmoOx6QfZ1or+9TYfreyUq2neyFP7oyh6z9xFMsBZ83Bboy/15j7z/VCKhdOAy/S22DQ6/+bgPOQRZrrIA8OPH+kzQmyAi7Ndgqlut7JTx5yxHSUR7hGAro5d1r5H1bJSh8xUJmlySIt3cWMAH1XeiYF+8uQi9KgnPjk32V7BcCaK/qGpfwRyGuUMTtVFDMDT03XNVnjkeQQVWYNkYu8iKP2IqFT3p+GEbdPA+pOLVelJgS7svj8/JS4dqoiN6VOhR0ugTodnKBYei/VBHViTPf9QqRLDl1Fjir3xExknslDcS6HgY5vqVLW1wpqWQ53xqq8FoFUIEqsnki55OcNXwFP/WbwbvTsMEKgrbypCBToK+yV9CkVnyyF7pl7jdTvAnk8SqKHirSqiF5EWGP1ROc3FLfNFAUYjOh0R92De0jAK5UOd94TSwGWh6zUaJysPwMqdqq1Ulg1aMAl9Z21DOgntRa9n4kZlh0ABlVhBKgcfNzj/8N9DHl2WR5N1vp95nLKIMV/z6qNq4WK9aq8ebBN6xXh1437wTOgA6X23yVvRElYFeAZWm/opPoA3LtrZy6X/x2qJOjSc6ZkXrJB2BlVj6q5c="
+  "signature": "MOPYFCgqz037HzxaPPXVx1Zs/nTwttU3INDLzSBVFsplC0tq2tb89IaVaVxOk5Qgh1JEiiMQRxQ6s2mhzWEnk7vWvFOD7UxaAABEO5iTvaPwrb9hzM6TS4h4hu4HeJvV/gwnpMGFgFzaXJCp47LPrh7Fr2rFoiOVV2QzfAH20w7+ACAIPO701RNNN2EH8hEUHabMwRQPV840400Neflawnynpfx5uHSUpcSLdYiWTb/trs/zzXDI0eCEh1GaMxiIn9sHzsYt76B+ZjBQq28jTJEILAsILanJ5PLpLrc7pQlQJ3oyiyJKT5s3icrNmuDKMBSnz/C6f7wy7hQS7m7w45yGomzU5th7RbDf7mxEXmpt2IbGvyjsctNBkj/NzcwGcreEeUxXHyEQ7BqtfgT+kUr0C3IuCAmcynNTD9rAR+Y4A6xwYixuNbiMqHmR/ptMQgayPSBNc30BraimVxYXCe1ZGIibfSxQNx+LcoAfKVTN4TYweufVryp6UIKsNG2F2eeHx1CV3tQwRhXoy2o00RvMgZBtmSqjEGjlS8hp7kRYQa0b4mZYFmAt9PQrAJLwVVuHyRoWv3uE2AOyl7MAFnz8Hj+6+qTZqy0Jc2Gb4Erxm0kMqxmCQzq8yTcCYtVvBiFWkVLgG974Ze+iELEkKtRdYo6yhySAhB43RohXEt0="
 }
