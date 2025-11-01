@@ -1,51 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2025-11-01T12:27:32.336741Z",
+  "generated_at": "2025-11-01T18:19:02.214282Z",
   "latest_stable": null,
-  "latest_prerelease": "0.1.0-alpha.13",
-  "releases": [
-    {
-      "version": "0.1.0-alpha.13",
-      "release_type": "prerelease",
-      "published_at": "2025-10-25T11:40:29Z",
-      "commit_sha": "4c7784f0dd6582770fe03b8d5c29425102ae854d",
-      "tag_name": "v0.1.0-alpha.13",
-      "manifest_url": "https://github.com/LoRaCue/loracue/releases/download/v0.1.0-alpha.13/manifest.json",
-      "manifest_sha256": "d82a2639d2a6b3d7e887bf4dd7b3cbc5a8fad450a0d1a2b2d0739ef1bf6bbca9",
-      "manifest_signature": "Cqkwne3vASc8CnfVcm/jCo6xIHeHB0cAx0TpV3+f93WYbMRIkxdhNiMwxifunqhsCiSbDAwFvkVwRw4w3Gk8JZRwb0kaD5tUqnrQl07Cero4etdf3UxO0J5JrIvalOqmNcxQtdhCQWJN0fCwO/a6dPr78IQu4XtVnVfKsmWWjNkWSxrRIZ751DRt5i5YH5+kgrHDvfMAguMQ8AaZ92TwA6g/9uIFkWnBtSB4ydsPaSTUwP9AZeVsRhs9NL3geprfcVaTQU18byuy8s192NSUC+yEhvPeETGzkrfwaLQ9HyNWjkDm4OFhgG+BZchPXTL8RvQ72hrkwcDNH2WHCenP+N695Zlteg2uMxlUffpjj+JqVR5Zqx4IiE3TnTDDcpxR+zstNKfZfSuqgvYr8Vi8QNk7ucoemTnMO+ksv+eyjZLCYs4nKZ2GZQRqQNP6FXrPyuWz8jHobaR7DaUr7Z7h+QTjb1q01+WjVz+E2/e6UsqH3LJv3E7guUh1vAky8vkRWUdjY+8OZgpJVZim/5FVRYs4bqPuBwHyPwh+xHAIkZl2+jidnBWmNlvPuvQwy33SuFzVFwOpwSXFZSfvRSb4jtqpzBvFPHo1rtIM5ZuCGD84T8mvFaI8o9KDrJ6tHR6OA3tzsV74Q1Bl2ePKbSpOlYbmoGd90i//lCYKivXw8rs=",
-      "supported_boards": [
-        "lilygo_t5"
-      ],
-      "changelog_summary": "No changes documented"
-    },
-    {
-      "version": "0.1.0-alpha.12",
-      "release_type": "prerelease",
-      "published_at": "2025-10-25T10:29:19Z",
-      "commit_sha": "90c432b4a15737a88cbd0c1df0134f50fd5c195b",
-      "tag_name": "v0.1.0-alpha.12",
-      "manifest_url": "https://github.com/LoRaCue/loracue/releases/download/v0.1.0-alpha.12/manifest.json",
-      "manifest_sha256": "4d3194006cd31c1f4b9f9813d1d296e1ef3e38a91f2bfde64381d8dddcae6d00",
-      "manifest_signature": "Q6B+r7/mpSN6oqYA1Ln4M96NF5HhKK13JgpeYhv2SVmjbzobLiogvPMyHO/wSCHgTzeghzognw4+7KKeJ2F2XhIEsMoN+VU+ZMDoQgEKTgV/ENhCO4odh1R51kbYcJ0XEFYVGx6M1smh8UBKHT3h8qAQKkPuAXdB97g99Xka4zLjOFjmEZtWeSbwH0OViyutLqOXuW6QEoF+aASCxECWbp07dgD4C+fgk8fbV320uxOFvQyaSbypSWaxLp849bLZGH1hoA7qyY54vvqaIXDC787IOQKKgf92mdg5L5jV4TBh+RKBsPqCeSJ81tJ6n/zieCSMTbdMAmSJM+5yeOVbOJfzYPANw78WhnmxCBs/HbjeTO0RVxUNdOhyMHMx8H5O+SXWAo3zzSUCyahydUM4G/V3OJhQsMlRlIAHdFttj6FfjgFXmtg/rbtrZM5h4cX0OOb8qd4uLkMwku+1ADw5xm6oO1jl35jcl5r/ltY6WWxPsXgI6DOeSJxIW/dVyqimuHhBoDMXDaEnB6EnI3hcyQmIVUA3jqwXl+N25Ln1Yqp2rdt7RnrRA8gYlEa7Ov/BSeuo/XKFQ7N2kDa7lLLtibYYhEV8SCq/Yu0TRkrBOXelIo9e0UFRw09DCzyfn7bM1UQpzNxBZYcJ3gtfVuGlgoi6CPV2Nubiu6FxxIqLOhw=",
-      "supported_boards": [
-        "heltec_v3"
-      ],
-      "changelog_summary": "No changes documented"
-    },
-    {
-      "version": "0.1.0-alpha.5",
-      "release_type": "prerelease",
-      "published_at": "2025-10-23T18:28:29Z",
-      "commit_sha": "17ff702c11298c9c8fdc5d39164a44e5f164abf1",
-      "tag_name": "v0.1.0-alpha.5",
-      "manifest_url": "https://github.com/LoRaCue/loracue/releases/download/v0.1.0-alpha.5/manifest.json",
-      "manifest_sha256": "65926ac748996c0f08313808899693661da935adf31b48aee1bf3f6f793949ac",
-      "manifest_signature": "MgsvbGo3sWsjk02tPyWQ9GV9csKM7SOq+nyTUPjrBr4fWYV8wzTWUEdM2ggBGXgF9D0OJyglIHGTl8vXD0Fphm+unmw4sXNwLBRL1CCfOdsf8sAkBG02jzKCTD3YlN+EEVit2OO7stiR66tP2MP7V9SMFm3f4GDwuZHdhgkhGkzYlqzOByIWhvxVQoJJhD2DWudq1IvlVn83vzYupdhSDvEbE2eD30lCzzSi4UiscMTsy/n80iwWj67gcA6jDIX1z4r5L1vsADc+yJHvcPKNXXt/46KMCtoJYQIWApWc6Rt5jeep1NTkOjfqmm4J4cqB1SkO1cBt8HKqMzvuEJaN5vumJvTNrSZgOmwooinOfjP35y83bHJFGOrS3ejOUlU5sa+SLxslU6QeCT1Ru831ICntxYFMxTprPVRIydej/SqtCfVUDTqFUAwhHJHHk1HbVuZSt/6FDi0+cjnSJawdmOq2kFhzfVjSOVm7yj0yNVe0o2M/JDVrGwQTsYOjX2Qs31eZOPOZ7v5vN/50NEoIlTFMZ0A7w6d8rXqWfHwdod6qTYziyyKHeVrNDpLkAxFkWIIRAv0oe1yt73UD3PSs/iHnwTvjXIcdLUcOVn06fCNqbmBJI8Mjph7OlTMbISdSF9Cg+Y+cmJg9e0FrhThiRfNF21awi8YfCxMCz5v4llk=",
-      "supported_boards": [
-        "heltec_v3"
-      ],
-      "changelog_summary": "No changes documented"
-    }
-  ],
-  "signature": "Zp+OC3u5Zd7GbRg4nbIhegHdNLMKz31Y72kSX5ZvS84CmP93TdrRgmXwkAf/HKBUE9EbPBMUmFiHLKlahUbR46Al+UyOz4JiVJJAbmIemLv7r143OqcYSj5bNl2FYZSmNW98ePuTAi3lI94R4y+GHqNzCz+Pin/eu3QbFFcK2jtnfsSgUsGhDe8UdnPu/9XDBfftRd8MvGw7rEKqpIVsOe5CaaH7t69fKzZd+vWISO+wq7X/Ii4VbQqzc4GmfNrAilmrCtrLDjl2P2CjDBHKIUhzeuYGzTGN/L+bKinfLlgqAAvpYpHpOMb1u6DQZQW9csq0BUEzrn34JLOeKrv7lBDYFAfs4OGX7TVGND8zWecUQBO2tGvRDZJNYFaoRX4DZC5iZabaUMOdzthRR5qT7C8X3Y4UsyBI7RebwUZnlFVxviGXOB4nWS51lI9cz4nsNukL9SXPzdmWJWLCm3ca1AzbJvlwWNd0vV0/1MJZzZwondCA+n/KkeJCxTEL3B7MVFx/KYQ/sUhyQ8Z48gKHWMMTE7ilGXPTOdr2KlEDKJND2HUsZ0eoeGaI7TeQxlMeu5bSgpV8977aRWzQ8F7sFFLH2gvdMt3eZrbA7yvS946hjdT8QWCkZjAly03pClQ3XZYmNj+cDozj2DZdFaxSwZaI+ngEVrqcEMHijDewVAg="
+  "latest_prerelease": null,
+  "releases": [],
+  "signature": "I3t+V11ZpIOItl6evT2NysZYP+2uGrpI/7O9oxqChYCodcUEmbJhAPMRIr8RZcRLjF6KFU2muyiU/0eXJ2KeFoYeYIDk31Wc6pLt6S3/3vzeIvUi6HuoP/B6/fL5pkGcBp+YZJbnQ6b/wSkAmnxolPKIrGty4yg2SNo++70RBEONCTQmlnwEm9obh8dQzjxsNx92SQBVodVvopKYJFPYy354tlXErQdRBCp9m1XDDCqZvLQ55/boPLrkvamDuhpLRXkXHN5zS2f6eLe1MClkC3Nur6AyHkIGORIQ7gzBFLYmL/g3fFRZ+I9XT0w8Aad3YDdnQz15mfzLJQSj9SuyW8JGcCOXJ80BSp+WKbtkZoNRj6Ks65zzLSQmHGOhg5dkWCUVqNkwq8QDISwiZdFIYyCouYvNW/re/sfcGpBmGQ9OUBW6yjL3n2yU1mXjovlOazjuYI9OO9m1RIy/KS/h+t0ZCgdsLh3wxIntOaC2Xix0LK7Bi7YSFPV1PuGg/ePNUoySHYGgB17C7jNMTtpcmnHlxd0pt6bgdvm0SweE3lhX4qRIk81KLRixhZ2Hh2J13D8pERW5BFROhUaNt+n8fG7e8ppfSZepvnT7fOKaaywe8xqYPB9p5O7gUOTepxyVMQXX5u+SvDDXpsJnzlKQIeGwgjAMayCZXnExPelO9NM="
 }
