@@ -7,7 +7,7 @@ export async function Hero() {
     const releases = await fetchReleaseIndex();
 
     return (
-        <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 py-16 lg:py-24">
+        <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 py-24 lg:py-32">
             <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
 
             <div className="container relative mx-auto px-4">
