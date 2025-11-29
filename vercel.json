@@ -1,27 +1,16 @@
 {
-  "version": 2,
-  "public": true,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "regions": ["iad1"],
   "headers": [
     {
       "source": "/releases.json",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=300, s-maxage=300"
+          "value": "public, max-age=300, s-maxage=300, stale-while-revalidate=600"
         },
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Content-Type",
-          "value": "application/json"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
         {
           "key": "Access-Control-Allow-Origin",
           "value": "*"
