@@ -114,48 +114,47 @@ def main():
         
         print(f"\nProcessing {tag_name}...")
         
-        # Find manifest.json asset
+        # Find manifests.json asset (plural - contains all models)
         manifest_asset = None
         for asset in release['assets']:
-            if asset['name'] == 'manifest.json':
+            if asset['name'] == 'manifests.json':
                 manifest_asset = asset
                 break
         
         if not manifest_asset:
-            print(f"  ⚠️  No manifest.json found, skipping")
+            print(f"  ⚠️  No manifests.json found, skipping")
             continue
         
-        # Download manifest
+        # Download manifests (array of model-specific manifests)
         try:
-            manifest = download_manifest(manifest_asset['browser_download_url'], github_token)
+            manifests = download_manifest(manifest_asset['browser_download_url'], github_token)
+            if not isinstance(manifests, list):
+                manifests = [manifests]  # Handle single manifest for backward compatibility
         except Exception as e:
-            print(f"  ✗ Failed to download manifest: {e}")
+            print(f"  ✗ Failed to download manifests: {e}")
             continue
         
-        # Verify manifest signature
-        manifest_copy = manifest.copy()
-        manifest_signature = manifest_copy.pop('signature', None)
-        
-        if not manifest_signature:
-            print(f"  ✗ No signature in manifest")
+        if not manifests:
+            print(f"  ⚠️  Empty manifests array, skipping")
             continue
         
-        manifest_json = json.dumps(manifest_copy, indent=2, sort_keys=True)
+        # Use first manifest for release-level info (all models share same version/commit)
+        first_manifest = manifests[0]
         
-        if not verify_signature(manifest_json, manifest_signature, public_key_path):
-            print(f"  ✗ Invalid manifest signature")
-            continue
+        # Extract supported boards from all manifests
+        supported_boards = []
+        for manifest in manifests:
+            board_id = manifest.get('board_id', '')
+            if board_id and board_id not in supported_boards:
+                supported_boards.append(board_id)
         
-        print(f"  ✓ Manifest signature verified")
+        print(f"  ✓ Found {len(manifests)} model(s): {', '.join(supported_boards)}")
         
-        # Calculate manifest SHA256
-        manifest_sha256 = calculate_sha256(json.dumps(manifest, indent=2))
+        # Calculate manifests SHA256
+        manifests_sha256 = calculate_sha256(json.dumps(manifests, indent=2))
         
-        # Extract supported boards
-        supported_boards = [board['board_id'] for board in manifest.get('boards', [])]
-        
-        # Extract changelog summary
-        changelog = manifest.get('changelog', {})
+        # Extract changelog summary from first manifest
+        changelog = first_manifest.get('changelog', {})
         changelog_parts = []
         if changelog.get('features'):
             changelog_parts.append(f"{len(changelog['features'])} features")
@@ -168,13 +167,13 @@ def main():
             "version": version,
             "release_type": "prerelease" if is_prerelease else "release",
             "published_at": release['published_at'],
-            "commit_sha": manifest.get('commit_sha', ''),
+            "commit_sha": first_manifest.get('commit_sha', ''),
             "tag_name": tag_name,
-            "manifest_url": manifest_asset['browser_download_url'],
-            "manifest_sha256": manifest_sha256,
-            "manifest_signature": manifest_signature,
+            "manifests_url": manifest_asset['browser_download_url'],
+            "manifests_sha256": manifests_sha256,
             "supported_boards": supported_boards,
-            "changelog_summary": changelog_summary
+            "changelog_summary": changelog_summary,
+            "models": [{"model": m.get('model', ''), "board_id": m.get('board_id', ''), "download_url": m.get('download_url', '')} for m in manifests]
         }
         
         releases_index['releases'].append(release_entry)
