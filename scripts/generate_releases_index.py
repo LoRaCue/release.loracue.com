@@ -8,13 +8,13 @@ import hashlib
 import requests
 from pathlib import Path
 from datetime import datetime, timezone
-from cryptography.hazmat.primitives import hashes, serialization
-from cryptography.hazmat.primitives.asymmetric import padding
+from cryptography.hazmat.primitives import serialization
+from cryptography.hazmat.primitives.asymmetric import ed25519
 from cryptography.hazmat.backends import default_backend
 
 
 def verify_signature(data: str, signature: str, public_key_path: Path) -> bool:
-    """Verify RSA signature."""
+    """Verify Ed25519 signature."""
     try:
         with open(public_key_path, 'rb') as f:
             public_key = serialization.load_pem_public_key(
@@ -22,11 +22,12 @@ def verify_signature(data: str, signature: str, public_key_path: Path) -> bool:
                 backend=default_backend()
             )
         
+        if not isinstance(public_key, ed25519.Ed25519PublicKey):
+            raise ValueError(f"Expected Ed25519 key, got {type(public_key).__name__}")
+        
         public_key.verify(
             base64.b64decode(signature),
-            data.encode('utf-8'),
-            padding.PKCS1v15(),
-            hashes.SHA256()
+            data.encode('utf-8')
         )
         return True
     except Exception as e:
@@ -35,7 +36,7 @@ def verify_signature(data: str, signature: str, public_key_path: Path) -> bool:
 
 
 def sign_data(data: str, private_key_path: Path) -> str:
-    """Sign data with RSA private key."""
+    """Sign data with Ed25519 private key."""
     with open(private_key_path, 'rb') as f:
         private_key = serialization.load_pem_private_key(
             f.read(),
@@ -43,11 +44,10 @@ def sign_data(data: str, private_key_path: Path) -> str:
             backend=default_backend()
         )
     
-    signature = private_key.sign(
-        data.encode('utf-8'),
-        padding.PKCS1v15(),
-        hashes.SHA256()
-    )
+    if not isinstance(private_key, ed25519.Ed25519PrivateKey):
+        raise ValueError(f"Expected Ed25519 key, got {type(private_key).__name__}")
+    
+    signature = private_key.sign(data.encode('utf-8'))
     
     return base64.b64encode(signature).decode('ascii')
 

@@ -42,7 +42,7 @@ jobs:
         # Generate index
         python3 scripts/generate_releases_index.py \
           "$GITHUB_TOKEN" \
-          "keys/firmware_public.pem" \
+          "keys/firmware_public_ed25519.pem" \
           "/tmp/signing_key.pem"
         
         # Clean up private key
