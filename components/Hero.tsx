@@ -7,24 +7,20 @@ export async function Hero() {
     const releases = await fetchReleaseIndex();
 
     return (
-        <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 py-24 lg:py-32">
+        <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 py-16 lg:py-24">
             <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
 
             <div className="container relative mx-auto px-4">
                 <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-                    <div className="relative mb-8 group">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                        <div className="relative bg-white rounded-full p-4 shadow-xl">
-                            {/* Placeholder for logo if not present, but assuming it will be there */}
-                            <Image
-                                src="/logo.svg"
-                                alt="LoRaCue Logo"
-                                width={80}
-                                height={80}
-                                className="w-20 h-20"
-                                priority
-                            />
-                        </div>
+                    <div className="mb-8">
+                        <Image
+                            src="/logo.svg"
+                            alt="LoRaCue Logo"
+                            width={100}
+                            height={100}
+                            className="w-24 h-24 drop-shadow-lg"
+                            priority
+                        />
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
