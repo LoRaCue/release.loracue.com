@@ -173,6 +173,7 @@ def main():
             "manifests_sha256": manifests_sha256,
             "supported_boards": supported_boards,
             "changelog_summary": changelog_summary,
+            "release_notes": release.get('body', ''),
             "models": [{"model": m.get('model', ''), "board_id": m.get('board_id', ''), "download_url": m.get('download_url', '')} for m in manifests]
         }
         

@@ -2,6 +2,7 @@ import { fetchReleaseIndex, fetchManifests } from '@/lib/releases';
 import { notFound } from 'next/navigation';
 import { SignatureStatus } from '@/components/SignatureStatus';
 import { Download } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 export async function generateStaticParams() {
     const releases = await fetchReleaseIndex();
@@ -62,10 +63,14 @@ export default async function ReleasePage({ params }: { params: Promise<{ versio
                 </div>
 
                 <div className="prose dark:prose-invert max-w-none">
-                    <h2>Changelog</h2>
-                    <pre className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg overflow-x-auto whitespace-pre-wrap font-mono text-sm">
-                        {release.changelog_summary}
-                    </pre>
+                    <h2>Release Notes</h2>
+                    {release.release_notes ? (
+                        <ReactMarkdown>{release.release_notes}</ReactMarkdown>
+                    ) : (
+                        <pre className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg overflow-x-auto whitespace-pre-wrap font-mono text-sm">
+                            {release.changelog_summary}
+                        </pre>
+                    )}
 
                     {manifest && (
                         <>

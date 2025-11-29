@@ -14,6 +14,7 @@ export interface Release {
     manifests_sha256: string;
     supported_boards: string[];
     changelog_summary: string;
+    release_notes?: string;
     models: ReleaseModel[];
 }
 
