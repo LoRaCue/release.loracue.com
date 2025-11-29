@@ -160,7 +160,23 @@ def main():
             changelog_parts.append(f"{len(changelog['features'])} features")
         if changelog.get('fixes'):
             changelog_parts.append(f"{len(changelog['fixes'])} fixes")
-        changelog_summary = ", ".join(changelog_parts) if changelog_parts else "No changes documented"
+        
+        changelog_summary = ", ".join(changelog_parts)
+        
+        if not changelog_summary:
+            # Fallback to extracting summary from release body
+            body = release.get('body', '')
+            if body:
+                # Take first non-empty line that isn't a header
+                lines = [l.strip() for l in body.split('\n') if l.strip()]
+                for line in lines:
+                    if not line.startswith('#') and not line.startswith('|'):
+                        # Truncate if too long
+                        changelog_summary = (line[:100] + '...') if len(line) > 100 else line
+                        break
+            
+            if not changelog_summary:
+                changelog_summary = "No changes documented"
         
         # Add to index
         release_entry = {
