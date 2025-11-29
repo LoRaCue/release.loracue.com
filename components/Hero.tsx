@@ -7,28 +7,28 @@ export async function Hero() {
     const releases = await fetchReleaseIndex();
 
     return (
-        <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 py-24 lg:py-32">
+        <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 min-h-screen flex items-center">
             <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
 
             <div className="container relative mx-auto px-4">
-                <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-                    <div className="mb-8">
+                <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+                    <div className="mb-12">
                         <Image
                             src="/logo.svg"
                             alt="LoRaCue Logo"
-                            width={100}
-                            height={100}
-                            className="w-24 h-24 drop-shadow-lg"
+                            width={120}
+                            height={120}
+                            className="w-32 h-32 drop-shadow-lg"
                             priority
                         />
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+                    <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 tracking-tight">
                         LoRaCue <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">Firmware</span>
                     </h1>
 
-                    <p className="text-xl text-blue-100/80 mb-10 max-w-2xl leading-relaxed">
-                        Enterprise-grade firmware for LoRa presentation remotes.
+                    <p className="text-2xl md:text-3xl text-blue-100/90 mb-12 max-w-3xl leading-relaxed">
+                        Enterprise-grade firmware for LoRa presentation remotes.<br />
                         Secure, reliable, and built for professionals.
                     </p>
 
