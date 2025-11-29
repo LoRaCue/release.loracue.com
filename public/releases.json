@@ -1,9 +1,34 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2025-11-29T20:31:43.837270Z",
+  "generated_at": "2025-11-29T21:03:35.964217Z",
   "latest_stable": null,
-  "latest_prerelease": "0.4.0-alpha.0",
+  "latest_prerelease": "0.4.1-alpha.0",
   "releases": [
+    {
+      "version": "0.4.1-alpha.0",
+      "release_type": "prerelease",
+      "published_at": "2025-11-29T21:03:24Z",
+      "commit_sha": "",
+      "tag_name": "v0.4.1-alpha.0",
+      "manifests_url": "https://github.com/LoRaCue/loracue/releases/download/v0.4.1-alpha.0/manifests.json",
+      "manifests_sha256": "7d14cc816b96d30d0451978e3bdc51e699ec5cdebb447aa73b203d43bbc8fdf4",
+      "supported_boards": [
+        "heltec_v3"
+      ],
+      "changelog_summary": "No changes documented",
+      "models": [
+        {
+          "model": "LC-Alpha+",
+          "board_id": "heltec_v3",
+          "download_url": "https://github.com/LoRaCue/loracue/releases/download/v0.4.1-alpha.0/loracue-alpha+-v0.4.1-alpha.0.zip"
+        },
+        {
+          "model": "LC-Alpha",
+          "board_id": "heltec_v3",
+          "download_url": "https://github.com/LoRaCue/loracue/releases/download/v0.4.1-alpha.0/loracue-alpha-v0.4.1-alpha.0.zip"
+        }
+      ]
+    },
     {
       "version": "0.4.0-alpha.0",
       "release_type": "prerelease",
@@ -155,5 +180,5 @@
       ]
     }
   ],
-  "signature": "HxlUW2u+8Hh/6h/c0Yzf4oaBkMIk8cYHo/dn5I4wC3R2xhSFs7oXHRo2ALuAISDXg7Iz7KScQvTHhqKW1YNzGTaQb7wj426EwVA37nm0f5vF4ZGSyiFi8E2MlKDHVXhc8bJBchG+HXkawUMu35S9h3alESGEWOuBR8eu3qgpWDbzxaaeRnOTPuj6sbN62EnrC6NWlHyZmTlDopOkyDs6LKgLZrd1eDVFuaiKIzSTChv3jC8+sfY4zwk+Lam1J59tPRCXE6PpT8D17V5tanpkO9ZLEVCaNE0vcA7eSOysINdln28+xlilei2EKRN5b1sxMKDM6O0qoAQpLFnaFlcEt6flIbQ5g4aXYqg6xxD8apiv1qOyqwJ3jGMz38w2oRumvp07/htQb4cGg2d8T0Spih/r5YKX10tf3xJ+Ao3zF6AlsGki+0koEuOq6BAC4xPq1E1QmXVzPfWwXB4oZ7FQB4H+y+ortR8TV/KKIc9EStmfgJU/t7oY0gUMblzaQVzHwO2QoAIY29gQuUelVkme2gsflfchA1zHewJ5UAqajSAk9paEdSxgq8c+7p+qbpC3tU/EUeA0ZzPLXPNps1qWzbulmm+tuopCa/dI6xjqcKzDweGAPB43IrSlhe/7TNW2khSOJMeP0ZPOGXqPLuvbEV2w8nOH6v0CaNZuPnoz9Jk="
+  "signature": "yscFpgST5u480ODPJawV3oU8s0eZB7HfmnwWCx6iOnNWChi4zUwMOM1KvzFMtb47cG5pOdOeEaknjbpdA0INAg=="
 }
