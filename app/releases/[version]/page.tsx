@@ -45,21 +45,33 @@ export default async function ReleasePage({ params }: { params: Promise<{ versio
                 <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 p-8 mb-8">
                     <h2 className="text-2xl font-bold mb-6">Downloads</h2>
                     <div className="grid gap-4">
-                        {release.models.map(model => (
-                            <div key={model.model} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                                <div>
-                                    <h3 className="font-bold text-gray-900 dark:text-white">{model.model}</h3>
-                                    <p className="text-sm text-gray-500">{model.board_id}</p>
+                        {release.models.map(model => {
+                            const manifestItem = Array.isArray(manifest)
+                                ? manifest.find((m: any) => m.board_id === model.board_id)
+                                : null;
+
+                            return (
+                                <div key={model.model} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                                    <div>
+                                        <h3 className="font-bold text-gray-900 dark:text-white">{model.model}</h3>
+                                        <p className="text-sm text-gray-500">{model.board_id}</p>
+                                        {manifestItem?.signature && (
+                                            <div className="mt-2 text-xs text-gray-400 font-mono">
+                                                <span className="select-none mr-1">Sig:</span>
+                                                <span className="break-all">{manifestItem.signature}</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                    <a
+                                        href={model.download_url}
+                                        className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium ml-4 shrink-0"
+                                    >
+                                        <Download className="w-5 h-5" />
+                                        Download
+                                    </a>
                                 </div>
-                                <a
-                                    href={model.download_url}
-                                    className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                                >
-                                    <Download className="w-5 h-5" />
-                                    Download
-                                </a>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
 
@@ -71,15 +83,6 @@ export default async function ReleasePage({ params }: { params: Promise<{ versio
                         <pre className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg overflow-x-auto whitespace-pre-wrap font-mono text-sm">
                             {release.changelog_summary}
                         </pre>
-                    )}
-
-                    {manifest && (
-                        <>
-                            <h2 className="mt-8">Technical Details</h2>
-                            <pre className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg overflow-x-auto font-mono text-sm">
-                                {JSON.stringify(manifest, null, 2)}
-                            </pre>
-                        </>
                     )}
                 </div>
             </div>
