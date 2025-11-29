@@ -1,8 +1,159 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2025-11-29T20:25:54.092503Z",
+  "generated_at": "2025-11-29T20:31:43.837270Z",
   "latest_stable": null,
-  "latest_prerelease": null,
-  "releases": [],
-  "signature": "rjB+lLfZ2pwgDYSlmrwfwQC7VeY5y0y9ar1J2sItnB9pE0O4Z/ku4Rs0sWY2MOBdN/87SLtOv8IpQZ5hEkJvx26KsZd7uL7h/dxM+IUYl6xJ+Sxh2wNBIh6cx3GKRHZeugWIUjm8967oIabVCudvhJqhPha52Q4flRYMGfQ6Gb39mnF9WRRuioPixbxKI8EE8c6C4LFEjfXZBUzplS0Wn6NgZ5HdGnX+RlZaWoWDWtflfdKoksh+9GaQ7p2XHCWqhF4DY9egUu0LXdnZFImw777OPdluWTKZ54+xBXwXelB0Tw1J0kZYtraizQIbiqYP6HyC7OVA2LHxApbw8bADLFpEg/1Nv6/N8rRXnhUL3axKcxMYaG+VNs/Pn1k6A60h/ztBxmZOaw/BxcTwsl401VgvelI4NpOUFk0HvNSi50DVxqCcKx27vIQhaEN1UJLgrgvLgH5ZTF84SgWTk7IEcnR24Hu25DpQGS0uWoEXiSKL2xuXZqMOVeBOjzB9BDx7nCiKeGuduNpVA7uSyqM70JS6jiEkokrvaxscKzJmzPuoql5AiWAodD8rOgnOXEj8kfQhqSfrgaGLhy9owoyJAXGq9bBJfFpeKWe5+yM9DEuui15yKNfXNWFgMfrQVMf/FU1WmXcZrBLm8gbjA/SI8Tb8C90lWVVljdZT9FoHMUY="
+  "latest_prerelease": "0.4.0-alpha.0",
+  "releases": [
+    {
+      "version": "0.4.0-alpha.0",
+      "release_type": "prerelease",
+      "published_at": "2025-11-29T20:25:40Z",
+      "commit_sha": "",
+      "tag_name": "v0.4.0-alpha.0",
+      "manifests_url": "https://github.com/LoRaCue/loracue/releases/download/v0.4.0-alpha.0/manifests.json",
+      "manifests_sha256": "682727ece02bc8cae63efeba3cc012a63d626a785555b4566d079792a907b36a",
+      "supported_boards": [
+        "heltec_v3"
+      ],
+      "changelog_summary": "No changes documented",
+      "models": [
+        {
+          "model": "LC-Alpha+",
+          "board_id": "heltec_v3",
+          "download_url": "https://github.com/LoRaCue/loracue/releases/download/v0.4.0-alpha.0/loracue-alpha+-v0.4.0-alpha.0.zip"
+        },
+        {
+          "model": "LC-Alpha",
+          "board_id": "heltec_v3",
+          "download_url": "https://github.com/LoRaCue/loracue/releases/download/v0.4.0-alpha.0/loracue-alpha-v0.4.0-alpha.0.zip"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0-alpha.0",
+      "release_type": "prerelease",
+      "published_at": "2025-11-10T15:41:24Z",
+      "commit_sha": "",
+      "tag_name": "v0.3.0-alpha.0",
+      "manifests_url": "https://github.com/LoRaCue/loracue/releases/download/v0.3.0-alpha.0/manifests.json",
+      "manifests_sha256": "941478893d1d70497a6dd676ad4ec7e65618655ed871186eb6f05a02ea919e01",
+      "supported_boards": [
+        "heltec_v3"
+      ],
+      "changelog_summary": "No changes documented",
+      "models": [
+        {
+          "model": "LC-Alpha",
+          "board_id": "heltec_v3",
+          "download_url": "https://github.com/LoRaCue/loracue/releases/download/v0.3.0-alpha.0/loracue-alpha-v0.3.0-alpha.0.zip"
+        },
+        {
+          "model": "LC-Alpha+",
+          "board_id": "heltec_v3",
+          "download_url": "https://github.com/LoRaCue/loracue/releases/download/v0.3.0-alpha.0/loracue-alpha-plus-v0.3.0-alpha.0.zip"
+        }
+      ]
+    },
+    {
+      "version": "0.2.0-alpha.12",
+      "release_type": "prerelease",
+      "published_at": "2025-11-07T20:12:47Z",
+      "commit_sha": "",
+      "tag_name": "v0.2.0-alpha.12",
+      "manifests_url": "https://github.com/LoRaCue/loracue/releases/download/v0.2.0-alpha.12/manifests.json",
+      "manifests_sha256": "16b9f53e6279d1b5195fed9bb7b7783c85e3d4087a5fb77b37c661c215d5515e",
+      "supported_boards": [
+        "heltec_v3"
+      ],
+      "changelog_summary": "No changes documented",
+      "models": [
+        {
+          "model": "LC-Alpha",
+          "board_id": "heltec_v3",
+          "download_url": "https://github.com/LoRaCue/loracue/releases/download/v0.2.0-alpha.12/loracue-alpha-v0.2.0-alpha.12.zip"
+        },
+        {
+          "model": "LC-Alpha+",
+          "board_id": "heltec_v3",
+          "download_url": "https://github.com/LoRaCue/loracue/releases/download/v0.2.0-alpha.12/loracue-alpha-plus-v0.2.0-alpha.12.zip"
+        }
+      ]
+    },
+    {
+      "version": "0.2.0-alpha.4",
+      "release_type": "prerelease",
+      "published_at": "2025-11-06T20:54:57Z",
+      "commit_sha": "",
+      "tag_name": "v0.2.0-alpha.4",
+      "manifests_url": "https://github.com/LoRaCue/loracue/releases/download/v0.2.0-alpha.4/manifests.json",
+      "manifests_sha256": "8a93da7d263f80153fac9a314cfcef8914be7d7be908152b81fab5e66e2c429b",
+      "supported_boards": [
+        "heltec_v3"
+      ],
+      "changelog_summary": "No changes documented",
+      "models": [
+        {
+          "model": "LC-Alpha",
+          "board_id": "heltec_v3",
+          "download_url": "https://github.com/LoRaCue/loracue/releases/download/v0.2.0-alpha.4/loracue-alpha-v0.2.0-alpha.4.zip"
+        },
+        {
+          "model": "LC-Alpha+",
+          "board_id": "heltec_v3",
+          "download_url": "https://github.com/LoRaCue/loracue/releases/download/v0.2.0-alpha.4/loracue-alpha-plus-v0.2.0-alpha.4.zip"
+        }
+      ]
+    },
+    {
+      "version": "0.2.0-alpha.3",
+      "release_type": "prerelease",
+      "published_at": "2025-11-06T20:08:54Z",
+      "commit_sha": "",
+      "tag_name": "v0.2.0-alpha.3",
+      "manifests_url": "https://github.com/LoRaCue/loracue/releases/download/v0.2.0-alpha.3/manifests.json",
+      "manifests_sha256": "82eafa19d666d87ff5bed5e784225bd208fbd99b667820b2b6c881ca814fa1f5",
+      "supported_boards": [
+        "heltec_v3"
+      ],
+      "changelog_summary": "No changes documented",
+      "models": [
+        {
+          "model": "LC-Alpha",
+          "board_id": "heltec_v3",
+          "download_url": "https://github.com/LoRaCue/loracue/releases/download/v0.2.0-alpha.3/loracue-lc-alpha-v0.2.0-alpha.3.zip"
+        },
+        {
+          "model": "LC-Alpha+",
+          "board_id": "heltec_v3",
+          "download_url": "https://github.com/LoRaCue/loracue/releases/download/v0.2.0-alpha.3/loracue-lc-alpha-plus-v0.2.0-alpha.3.zip"
+        }
+      ]
+    },
+    {
+      "version": "0.2.0-alpha.2",
+      "release_type": "prerelease",
+      "published_at": "2025-11-06T20:04:24Z",
+      "commit_sha": "",
+      "tag_name": "v0.2.0-alpha.2",
+      "manifests_url": "https://github.com/LoRaCue/loracue/releases/download/v0.2.0-alpha.2/manifests.json",
+      "manifests_sha256": "7e0beed8432bb6d1be15a56c568a0d8c38a43510685205d101a38520ae179854",
+      "supported_boards": [
+        "heltec_v3"
+      ],
+      "changelog_summary": "No changes documented",
+      "models": [
+        {
+          "model": "LC-Alpha",
+          "board_id": "heltec_v3",
+          "download_url": "https://github.com/LoRaCue/loracue/releases/download/v0.2.0-alpha.2/loracue-lc-alpha-v0.2.0-alpha.2.zip"
+        },
+        {
+          "model": "LC-Alpha+",
+          "board_id": "heltec_v3",
+          "download_url": "https://github.com/LoRaCue/loracue/releases/download/v0.2.0-alpha.2/loracue-lc-alpha-plus-v0.2.0-alpha.2.zip"
+        }
+      ]
+    }
+  ],
+  "signature": "HxlUW2u+8Hh/6h/c0Yzf4oaBkMIk8cYHo/dn5I4wC3R2xhSFs7oXHRo2ALuAISDXg7Iz7KScQvTHhqKW1YNzGTaQb7wj426EwVA37nm0f5vF4ZGSyiFi8E2MlKDHVXhc8bJBchG+HXkawUMu35S9h3alESGEWOuBR8eu3qgpWDbzxaaeRnOTPuj6sbN62EnrC6NWlHyZmTlDopOkyDs6LKgLZrd1eDVFuaiKIzSTChv3jC8+sfY4zwk+Lam1J59tPRCXE6PpT8D17V5tanpkO9ZLEVCaNE0vcA7eSOysINdln28+xlilei2EKRN5b1sxMKDM6O0qoAQpLFnaFlcEt6flIbQ5g4aXYqg6xxD8apiv1qOyqwJ3jGMz38w2oRumvp07/htQb4cGg2d8T0Spih/r5YKX10tf3xJ+Ao3zF6AlsGki+0koEuOq6BAC4xPq1E1QmXVzPfWwXB4oZ7FQB4H+y+ortR8TV/KKIc9EStmfgJU/t7oY0gUMblzaQVzHwO2QoAIY29gQuUelVkme2gsflfchA1zHewJ5UAqajSAk9paEdSxgq8c+7p+qbpC3tU/EUeA0ZzPLXPNps1qWzbulmm+tuopCa/dI6xjqcKzDweGAPB43IrSlhe/7TNW2khSOJMeP0ZPOGXqPLuvbEV2w8nOH6v0CaNZuPnoz9Jk="
 }
