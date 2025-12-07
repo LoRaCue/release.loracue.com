@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2025-12-06T18:20:20.425384Z",
+  "generated_at": "2025-12-07T01:21:01.745558Z",
   "latest_stable": null,
   "latest_prerelease": "0.4.1-alpha.0",
   "releases": [
@@ -187,5 +187,5 @@
       ]
     }
   ],
-  "signature": "LwPqLUrhZBrGEdUH8fivMkw8mkYMkY8kq3KAP+lUD9Ij3erF7bQukLEYNahJ5KbN6UecqFmxVhho7mDgM1H/Dg=="
+  "signature": "rItMPwXfaXsgj5g0tjRFTte0E0ZWiOo+aqNyK5BXViDkRkd5Rr9wSATb3BOQY1/7SKA9PIpYkvEv0U5QiIiXDg=="
 }
