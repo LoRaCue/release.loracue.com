@@ -1,26 +1,27 @@
 # LoRaCue Release Index
 
-This private repository hosts the release index for LoRaCue firmware distribution.
+This repository hosts the release index and web interface for LoRaCue firmware distribution.
 
 ## 🏗️ Architecture
 
 ```
-GitHub Actions → Generate releases.json → Commit → Vercel Auto-Deploy → CDN
+GitHub Actions → Generate releases.json → Commit → Next.js Build → Vercel Deploy → CDN
 ```
 
 ## 📋 What This Does
 
-1. **Monitors** LoRaCue/loracue releases via webhook and scheduled checks
-2. **Downloads** manifest.json from each release
+1. **Monitors** LoRaCue/loracue releases via webhook
+2. **Downloads** manifests.json from each release
 3. **Verifies** signatures with embedded public key
 4. **Aggregates** metadata into releases.json
 5. **Signs** releases.json with private key
 6. **Commits** to repository
-7. **Deploys** automatically to Vercel CDN
+7. **Builds** Next.js web interface
+8. **Deploys** automatically to Vercel CDN
 
 ## 🔐 Security
 
-- **Private Repository**: Keeps signing key secure
+- **Public Repository**: Open source with secure key management
 - **Public Deployment**: Only releases.json is served via Vercel
 - **Signature Verification**: All manifests verified before inclusion
 - **Signed Index**: releases.json signed for client verification
@@ -34,7 +35,7 @@ GitHub Actions → Generate releases.json → Commit → Vercel Auto-Deploy → 
 
 ### GitHub Secrets
 
-- `FIRMWARE_SIGNING_KEY`: RSA-4096 private key (same as loracue repo)
+- `FIRMWARE_SIGNING_KEY`: Ed25519 private key (same as loracue repo)
 - `GITHUB_TOKEN`: Automatically provided by GitHub Actions
 
 ### Vercel Configuration
@@ -42,9 +43,9 @@ GitHub Actions → Generate releases.json → Commit → Vercel Auto-Deploy → 
 1. Connect repository to Vercel
 2. Configure custom domain: `release.loracue.com`
 3. Enable automatic deployments on push to main
-4. Framework Preset: Other
-5. Build Command: (none)
-6. Output Directory: `public`
+4. Framework Preset: Next.js
+5. Build Command: `npm run build`
+6. Output Directory: `.next`
 
 ## 📁 Repository Structure
 
@@ -54,11 +55,14 @@ GitHub Actions → Generate releases.json → Commit → Vercel Auto-Deploy → 
 │   └── workflows/
 │       └── update-index.yml    # Auto-update workflow
 ├── keys/
-│   └── firmware_public.pem     # Public key for verification
+│   └── firmware_public_ed25519.pem # Public key for verification
 ├── scripts/
 │   └── generate_releases_index.py
 ├── public/
 │   └── releases.json           # Generated index (auto-committed)
+├── app/                        # Next.js app directory
+├── components/                 # React components
+├── lib/                        # Utility libraries
 ├── vercel.json                 # Vercel configuration
 └── README.md
 ```
@@ -67,7 +71,6 @@ GitHub Actions → Generate releases.json → Commit → Vercel Auto-Deploy → 
 
 1. **Repository Dispatch**: Triggered by loracue repo on new release
 2. **Manual**: Via GitHub Actions UI
-3. **Scheduled**: Every 6 hours (backup)
 
 ## 📊 releases.json Schema
 
@@ -84,9 +87,8 @@ GitHub Actions → Generate releases.json → Commit → Vercel Auto-Deploy → 
       "published_at": "2025-10-22T15:59:00Z",
       "commit_sha": "6458caf",
       "tag_name": "v0.2.0-alpha.201",
-      "manifest_url": "https://github.com/LoRaCue/loracue/releases/download/v0.2.0-alpha.201/manifest.json",
-      "manifest_sha256": "abc123...",
-      "manifest_signature": "def456...",
+      "manifests_url": "https://github.com/LoRaCue/loracue/releases/download/v0.2.0-alpha.201/manifests.json",
+      "manifests_sha256": "abc123...",
       "supported_boards": ["heltec_v3"],
       "changelog_summary": "Bug fixes and performance improvements"
     }
@@ -121,7 +123,7 @@ with open('public/releases.json') as f:
 signature = data.pop('signature')
 releases_json = json.dumps(data, indent=2, sort_keys=True)
 
-with open('keys/firmware_public.pem', 'rb') as f:
+with open('keys/firmware_public_ed25519.pem', 'rb') as f:
     public_key = serialization.load_pem_public_key(f.read(), backend=default_backend())
 
 try:
@@ -143,7 +145,7 @@ When rotating signing keys:
 
 1. Generate new key pair
 2. Update `FIRMWARE_SIGNING_KEY` secret
-3. Commit new public key to `keys/firmware_public.pem`
+3. Commit new public key to `keys/firmware_public_ed25519.pem`
 4. Trigger workflow to regenerate releases.json
 5. Update LoRaCue Manager with new public key
 6. Keep old key for 6 months (backward compatibility)
