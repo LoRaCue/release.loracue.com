@@ -4,9 +4,6 @@ on:
   repository_dispatch:
     types: [new_release]
   workflow_dispatch:
-  schedule:
-    # Run every 6 hours to catch any missed updates
-    - cron: '0 */6 * * *'
 
 permissions:
   contents: write
